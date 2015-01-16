@@ -18,7 +18,7 @@ toastr.options = {
 
 var showToast = function(flash){
   for(var i = 0; i < flash.length; i++ ){
-    msg = flash[i];
+    var msg = flash[i];
     var type = {
       notice: 'success',
       alert: 'error',
