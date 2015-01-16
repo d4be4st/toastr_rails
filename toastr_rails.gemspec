@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['d4be4st@gmail.com']
   spec.summary       = 'Opinionated toastr js asset gem.'
   spec.description   = 'Add toastr js library and use replace ugly bootstrap flash messages'
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/d4be4st/toastr_rails'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
