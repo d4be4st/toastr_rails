@@ -25,6 +25,12 @@ var showToast = function(flash){
       warning: 'warning',
       info: 'info'
     };
-    toastr[type[msg[0]]](msg[1]);
+    var options = {
+      notice: {},
+      alert: { "timeOut": "0", "extendedTimeOut": "0" },
+      warning: { "timeOut": "0", "extendedTimeOut": "0" },
+      info: {}
+    };
+    toastr[type[msg[0]]](msg[1], '', options[msg[0]]);
   }
 };
