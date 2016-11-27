@@ -23,7 +23,9 @@ var showToast = function(flash){
     var msg = flash[i];
     var type = {
       notice: 'success',
+      success: 'success',
       alert: 'error',
+      error: 'error',
       warning: 'warning',
       info: 'info'
     };
@@ -33,6 +35,10 @@ var showToast = function(flash){
       warning: { "timeOut": "0", "extendedTimeOut": "0" },
       info: {}
     };
-    toastr[type[msg[0]]](msg[1], '', options[msg[0]]);
+    try {
+      toastr[type[msg[0]]](msg[1], '', options[msg[0]]);
+    } catch(err) {
+      toastr.info(msg[1], '', options[msg[0]]);
+    }
   }
 };
